@@ -5,6 +5,8 @@ Created on Tue Nov 13 21:04:29 2018
 @author: LDog
 """
 #2018-11-13 HCX at WHU LIESMARS 220 Computer Room
+#mnist数据集下载并可视化-HCX.py
+
 
 #MNIST是一个入门级的计算机视觉数据集，当我们编程时，第一件事往往会想到学习打印HelloWord
 #在机器学习入门的领域里，我们会用MNIST数据集来实验各种模型
@@ -37,7 +39,7 @@ import pylab
 
 #train.images是一个形状为【55000，784】的张量，第一个维度数字用来索引图片，第二个维度数字来索引每张图片
 #中的像素点，此张量里的每一个元素，都表示某张图片里的某个像素的强度值，值介于0~255之间
-im=mnist.train.images[2]  #读取MNIST数据中具体的某个数据 
+im=mnist.train.images[2]  #读取MNIST数据中具体的某个数据，可以尝试其他值
 im=im.reshape(-1,28)
 pylab.imshow(im)  #将数据进行可视化
 pylab.show()
